@@ -1,0 +1,29 @@
+@startuml Observer pattern
+interface IDisposable
+class Unsubscriber<DateTime> {
+
+}
+interface IObservable<DateTime> {
+    Subscribe(IObserver)
+}
+class ClockHandler {
+    -Observers
+    +OnClick()
+}
+
+interface IObserver<DateTime> {
+    OnNext(DateTime value)
+    OnError(Exception error)
+    OnCompleted()
+}
+
+class DigitalClock {
+    +Subscribe(ClockHandler)
+    +Unsubscribe
+}
+IDisposable <|-- Unsubscriber
+DigitalClock -> Unsubscriber 
+IObservable <|-- ClockHandler
+IObserver <|-- DigitalClock
+ClockHandler o-> DigitalClock
+@enduml
