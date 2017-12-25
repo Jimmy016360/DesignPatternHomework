@@ -5,7 +5,7 @@ namespace ObserverPattern
     /// <summary>
     /// 數位時鐘
     /// </summary>
-    public class DigitalClock : IObserver<DateTime>
+    public class ChineseClock : IObserver<DateTime>
     {
         /// <summary>
         /// 取消訂閱
@@ -35,7 +35,7 @@ namespace ObserverPattern
         /// <param name="value">目前通知資訊</param>
         public void OnNext(DateTime value)
         {
-            Console.WriteLine($"Current time: {value.Hour:00}:{value.Minute:00}:{value.Second:00}");
+            Console.WriteLine($"現在時間:{value.Hour}時 {value.Minute}分 {value.Second}秒");
         }
 
         /// <summary>

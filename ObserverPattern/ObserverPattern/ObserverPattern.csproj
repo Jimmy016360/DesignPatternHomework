@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChineseClock.cs" />
+    <Compile Include="TickEveryMinClockHandler.cs" />
     <Compile Include="ClockHandler.cs" />
+    <Compile Include="TickEverySecondClockHandler.cs" />
     <Compile Include="DigitalClock.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
