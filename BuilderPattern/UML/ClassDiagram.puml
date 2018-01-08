@@ -1,0 +1,24 @@
+@startuml Builder pattern
+interface IComputerStore {
+    +CustomBuild()
+}
+abstract class ComputerStore {
+    #CustomComputer 
+    {abstract} #AddCup()
+    {abstract} #AddMotherBoard()
+    {abstract} #AddPower()
+    {abstract} #AddMemory()
+    {abstract} #AddHardDisk()
+    {abstract} #AddVedioCard()
+}
+class SenaoComputerStore
+class OanesComputerStore
+class CustomComputer
+
+IComputerStore <|- ComputerStore
+ComputerStore <|.. SenaoComputerStore
+ComputerStore <|.. OanesComputerStore
+
+ComputerStore *-> CustomComputer
+
+@enduml
