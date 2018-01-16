@@ -1,0 +1,103 @@
+@startuml Class diagram
+package abstract {
+    abstract class CosplayCostumeFactory {
+
+    }
+    abstract class Armor {
+
+    }
+    abstract class Boots {
+
+    }
+    abstract class Hat {
+
+    }
+    abstract class Helmet {
+
+    }
+    abstract class Weapon {
+
+    }
+}
+
+package Pokemon {
+    class PokemonCostumeFactory {
+
+    }
+    class PokemonArmor {
+        
+    }
+    class PokemonBoots {
+        
+    }
+    class PokemonHat {
+        
+    }
+    class PokemonHelmet {
+        
+    }
+    class PokemonWeapon {
+        
+    }
+}
+
+package WarCraft {
+    class WarCraftCostumeFactory {
+
+    }
+    class WarCraftArmor {
+        
+    }
+    class WarCraftBoots {
+        
+    }
+    class WarCraftHat {
+        
+    }
+    class WarCraftHelmet {
+        
+    }
+    class WarCraftWeapon {
+        
+    }
+
+}
+
+
+class CostumeShop {
+
+}
+
+CosplayCostumeFactory <|-- PokemonCostumeFactory
+CosplayCostumeFactory <|-- WarCraftCostumeFactory
+
+Armor <|-- PokemonArmor
+Armor <|-- WarCraftArmor
+Boots <|-- PokemonBoots
+Boots <|-- WarCraftBoots
+Hat <|-- PokemonHat
+Hat <|-- WarCraftHat
+Helmet <|-- PokemonHelmet
+Helmet <|-- WarCraftHelmet
+Weapon <|-- PokemonWeapon
+Weapon <|-- WarCraftWeapon
+
+PokemonCostumeFactory ..> PokemonArmor
+PokemonCostumeFactory ..> PokemonBoots
+PokemonCostumeFactory ..> PokemonHat
+PokemonCostumeFactory ..> PokemonHelmet
+PokemonCostumeFactory ..> PokemonWeapon
+
+WarCraftCostumeFactory ..> WarCraftArmor
+WarCraftCostumeFactory ..> WarCraftBoots
+WarCraftCostumeFactory ..> WarCraftHat
+WarCraftCostumeFactory ..> WarCraftHelmet
+WarCraftCostumeFactory ..> WarCraftWeapon
+
+CostumeShop --> CosplayCostumeFactory
+CostumeShop --> Armor
+CostumeShop --> Boots
+CostumeShop --> Hat
+CostumeShop --> Helmet
+CostumeShop --> Weapon
+@enduml
