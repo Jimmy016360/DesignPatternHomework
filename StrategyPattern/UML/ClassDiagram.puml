@@ -1,0 +1,27 @@
+@startuml Class caption 
+interface IDiscount {
+    +Calculate()
+}
+
+class TwentyPercentOff {
+    +Calculate()
+}
+
+class RebatePurchaseOverThousand {
+    +Calculate()
+}
+
+class ShoppingCart {
+    -IDiscount Discount
+    +int Amount
+    +ShoppingCart(IDiscount discount)
+    +CheckOut()
+}
+
+IDiscount <|.. TwentyPercentOff
+IDiscount <|.. RebatePurchaseOverThousand
+
+ShoppingCart o-> IDiscount
+
+
+@enduml
